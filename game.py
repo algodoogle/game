@@ -38,8 +38,12 @@ click = False
 """
 mane loop this shoud onle end when the plaer closis the game 
 """
+<<<<<<< HEAD
+
+=======
 menu = mainMenu(screnRes)
 gameName = 'test'
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
 while not end:
     #this the where the menu shoud be there is a lot of tems stuf heir for now
 
@@ -56,7 +60,11 @@ while not end:
 
 
 
+<<<<<<< HEAD
+    menu.draw(screen, mousePos)
+=======
     menu.draw(screen)
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
 
     if click:
         i = menu.getClick(mousePos)
@@ -84,7 +92,11 @@ while not end:
         dispMenu = False
         tileSca = scalTile(tiles,level.scale)
         render = True
+<<<<<<< HEAD
+        #buttom1 = button((100,100), 350, 150, pygame.image.load('buttom_1.png'))
+=======
         buttom1 = button((100,100), 350, 150, pygame.image.load('buttom_1.png'))
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
     while inGame:
 
         

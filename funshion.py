@@ -66,11 +66,20 @@ class world:
                 self.screenOffSet[1] = self.scale - 1
         
 class button:
+<<<<<<< HEAD
+    def __init__(self, XY, sysX, sysY, icon, over):
+=======
     def __init__(self, XY, sysX, sysY, icon):
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
         self.XY = XY
         self.sysX = sysX
         self.sysY = sysY
         self.icon = icon
+<<<<<<< HEAD
+        self.overIcon = over
+        self.drawIcon = icon
+=======
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
 
 
     def click(self, XY):
@@ -78,14 +87,38 @@ class button:
             if XY[1] > self.XY[1] and XY[1] < self.XY[1] + self.sysY:
                 return True
         return False
+<<<<<<< HEAD
+    
+    def over(self, XY):
+        if XY[0] > self.XY[0] and XY[0] < self.XY[0] + self.sysX:
+            if XY[1] > self.XY[1] and XY[1] < self.XY[1] + self.sysY:
+                self.drawIcon = self.overIcon
+            else: self.drawIcon = self.icon
+        else: self.drawIcon = self.icon
+=======
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
                  
             
     def ID(self):
         return str(self)
+<<<<<<< HEAD
+    
+    def scal(self, scale):
+        self.icon = pygame.transform.smoothscale(self.icon, (int(self.icon.get_size()[0]*scale), int(self.icon.get_size()[1]*scale)))
+        self.overIcon = pygame.transform.smoothscale(self.overIcon, (int(self.overIcon.get_size()[0]*scale), int(self.overIcon.get_size()[1]*scale)))
+        self.drawIcon = pygame.transform.smoothscale(self.drawIcon, (int(self.drawIcon.get_size()[0]*scale), int(self.drawIcon.get_size()[1]*scale)))
+        self.sysX = self.icon.get_size()[0]
+        self.sysY = self.icon.get_size()[1]
+
+
+    def draw(self, screen):
+        screen.blit(self.drawIcon, self.XY)
+=======
 
 
     def draw(self, screen):
         screen.blit(self.icon, self.XY)
+>>>>>>> adb13081fcc21070d297d3db8410f3f72ae44ab4
 
 
 
